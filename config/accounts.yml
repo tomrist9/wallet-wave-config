@@ -2,7 +2,7 @@ build:
   version: "3.0"
 
 accounts:
-  message: "Welcome to Wallet-wave accounts related local APIs "
+  message: "Welcome to Wallet-wave accounts related docker APIs "
   contactDetails:
     name: "Tomris Teymurlu - Developer"
     email: "tomristt9@gmail.com"
