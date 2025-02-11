@@ -1,5 +1,12 @@
 server:
   port: 8070
+
+spring:
+  application:
+    name: eurekaserver
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+
 eureka:
   instance:
     hostname: localhost
@@ -7,4 +14,11 @@ eureka:
     fetchRegistry: false
     registerWithEureka: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: "http://${eureka.instance.hostname}:${server.port}/eureka/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
